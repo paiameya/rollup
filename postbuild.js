@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import * as cheerio from 'cheerio';
-import terser from 'terser';
+import * as terser from 'terser';
 import { fileURLToPath } from 'url';
 
 // Ensure input/output directories are defined

@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 
 // Ensure input/output directories are defined
 const INPUT_DIR = './src/internal_browser'; // Input directory containing source files
-const OUTPUT_DIR = './build'; // Output build directory
+const OUTPUT_DIR = './dist'; // Output build directory
 
 /**
  * Ensure the directory exists, and create it if necessary.

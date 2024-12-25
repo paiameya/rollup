@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masonry Image Grid</title>
+    <link rel="stylesheet" href="build/components/MasonryImageGrid.css">
+</head>
+
+<body>
+    <div id="masonry-grid-root"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script type="module" src="../components/MasonryImageGrid.jsx"></script>
+    <script>
+        const root = ReactDOM.createRoot(document.getElementById('masonry-grid-root'));
+        root.render(React.createElement(MasonryImageGrid));
+    </script>
+
+
+</body></html>

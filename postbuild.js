@@ -1,9 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 import * as cheerio from 'cheerio';
-import * as terser from 'terser';
+import terser from 'terser';
 import { fileURLToPath } from 'url';
 
+// Ensure input/output directories are defined
 const INPUT_DIR = './src/internal_browser'; // Input directory containing source files
 const OUTPUT_DIR = './build'; // Output build directory
 
@@ -30,6 +31,14 @@ async function minifyJS(srcPath, destPath) {
     ensureDirSync(path.dirname(destPath));
     fs.writeFileSync(destPath, minified.code, 'utf-8');
     console.log(`Minified and copied: ${srcPath} -> ${destPath}`);
+}
+
+/**
+ * Convert 'file://' URL to file system path, used when the script is run via URL.
+ */
+function getPathFromUrl(url) {
+    const filePath = fileURLToPath(url);
+    return path.resolve(filePath);
 }
 
 /**
